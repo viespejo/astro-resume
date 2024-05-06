@@ -1,0 +1,10 @@
+---
+import { type PInfo } from '../../data/resume';
+type Props = PInfo;
+
+const { title, location, email, info } = Astro.props;
+---
+
+<p><strong>{title}</strong></p>
+<p>{location} | <a href={`mailto:${email}`}>{email}</a></p>
+<p>{info}</p>

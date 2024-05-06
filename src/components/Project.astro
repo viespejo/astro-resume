@@ -1,0 +1,52 @@
+---
+import { type Project } from '../../data/resume';
+type Props = Project;
+
+const {
+  name,
+  title,
+  description,
+  company,
+  companyUrl,
+  position,
+  period,
+  skills,
+  challenge,
+} = Astro.props;
+---
+
+<div class="break-inside-avoid">
+  <h3>{name}</h3>
+  <p>
+    <a href={companyUrl} target="_blank">{company}</a> | <em>{position}</em> | {
+      period
+    }
+  </p>
+  <h4>{title}</h4>
+  <p>
+    {description}
+  </p>
+</div>
+<div class="break-inside-avoid">
+  {
+    challenge && (
+      <p class="border-l-4 border-indigo-400 pl-2">
+        <span class="px-2 text-xs underline underline-offset-2 dark:text-white">
+          Challenge
+        </span>
+        {challenge}
+      </p>
+    )
+  }
+  {
+    skills?.length && (
+      <div class="mt-4 flex flex-wrap gap-1">
+        {skills.map((skill) => (
+          <span class="rounded-full bg-indigo-100/70 px-3 py-1 text-xs dark:bg-gray-100/20">
+            {skill}
+          </span>
+        ))}
+      </div>
+    )
+  }
+</div>

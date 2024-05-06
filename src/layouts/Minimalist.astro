@@ -1,0 +1,44 @@
+---
+import '@fontsource/poppins';
+import Download from '../components/Download.astro';
+import './styles.css';
+
+type Props = {
+  title: string;
+  pdfLink: string;
+  noIndex?: boolean;
+  description?: string;
+};
+
+const { PDF_VIEW, FORCE_THEME = '' } = import.meta.env;
+
+const { title, pdfLink, noIndex, description } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="en" class={FORCE_THEME}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description || title} />
+    {noIndex && <meta name="robots" content="noindex" />}
+    <title>{title}</title>
+  </head>
+  <body class={!PDF_VIEW ? 'bg-indigo-50 dark:bg-slate-900 sm:my-14' : ''}>
+    <div class="container mx-auto flex justify-center">
+      <article class="minimalist relative">
+        {
+          !PDF_VIEW && (
+            <div class="not-prose absolute right-4 top-4">
+              <Download href={pdfLink} />
+            </div>
+          )
+        }
+        <slot />
+      </article>
+    </div>
+    <style></style>
+  </body>
+</html>
