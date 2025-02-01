@@ -1,30 +1,6 @@
-export type Project = {
-  name: string;
-  company: string;
-  companyUrl?: string;
-  position: string;
-  period: string;
-  title: string;
-  description: string;
-  challenge: string;
-  skills: string[];
-};
+import { ResumeData } from './types';
 
-export type PInfo = {
-  title: string;
-  location: string;
-  email: string;
-  info: string;
-};
-
-type Data = {
-  name: string;
-  personalInfo: PInfo;
-  projects: Project[];
-  skills: Record<string, string>;
-};
-
-const data: Data = {
+export const resumeEn: ResumeData = {
   name: 'Vicente Espejo',
   personalInfo: {
     title: 'Mathematician to Technical Lead',
@@ -371,5 +347,3 @@ const data: Data = {
     },
   ],
 };
-
-export default data;

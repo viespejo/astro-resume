@@ -1,0 +1,26 @@
+---
+const currentPath = Astro.url.pathname;
+const currentLang = currentPath.startsWith('/es') ? 'es' : 'en';
+---
+
+<div class="flex items-center gap-2">
+  <a
+    href="/en"
+    class:list={[
+      'text-sm',
+      currentLang === 'en' ? 'font-bold text-slate-900' : 'text-slate-500',
+    ]}
+  >
+    EN
+  </a>
+  <span class="text-slate-300">|</span>
+  <a
+    href="/es"
+    class:list={[
+      'text-sm',
+      currentLang === 'es' ? 'font-bold text-slate-900' : 'text-slate-500',
+    ]}
+  >
+    ES
+  </a>
+</div>

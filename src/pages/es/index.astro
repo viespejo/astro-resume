@@ -1,0 +1,35 @@
+---
+import Layout from '../../layouts/Resume.astro';
+import Project from '../../components/Project.astro';
+import PersonalInfo from '../../components/PersonalInfo.astro';
+import Education from '../../components/Education.astro';
+import { getResumeData } from '../../../data/resume/index';
+
+const data = getResumeData('es');
+const { projects, name, personalInfo, skills } = data;
+const skillsKeys = Object.keys(skills);
+---
+
+<Layout
+  title={`${name} - Currículum`}
+  pdfLink="/resume.es.pdf"
+  description={`Currículum de ${name}`}
+  lang="es"
+>
+  <h1>{name}</h1>
+  <PersonalInfo {...personalInfo} />
+  <h2>Tecnologías y Habilidades</h2>
+  <ul>
+    {
+      skillsKeys.map((skill) => (
+        <li>
+          <strong>{skill}</strong>: {skills[skill]}
+        </li>
+      ))
+    }
+  </ul>
+  <h2>Educación</h2>
+  <Education />
+  <h2>Proyectos</h2>
+  {projects.map((project) => <Project {...project} />)}
+</Layout>
