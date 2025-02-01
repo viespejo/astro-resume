@@ -14,6 +14,7 @@ type Props = {
 const { title, pdfLink, description, lang = 'en' } = Astro.props;
 
 const { PDF_VIEW, FORCE_THEME = '' } = import.meta.env;
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -21,12 +22,10 @@ const { PDF_VIEW, FORCE_THEME = '' } = import.meta.env;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${base}/favicon.svg`} />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description || title} />
     <meta name="robots" content="noindex" />
-    <link rel="alternate" hreflang="en" href="https://viespejo.github.io" />
-    <link rel="alternate" hreflang="es" href="https://viespejo.github.io/es" />
     <title>{title}</title>
   </head>
   <body class={!PDF_VIEW ? 'bg-indigo-50 dark:bg-slate-900 sm:my-14' : ''}>

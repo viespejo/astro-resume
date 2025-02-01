@@ -6,7 +6,7 @@ export const resumeEs: ResumeData = {
     title: 'De Matemático a Tech Lead',
     location: 'Sevilla, España',
     email: 'viespejo@gmail.com',
-    info: 'Tech Lead con más de 20 años de experiencia en ingeniería de software con una sólida base matemática. Apasionado por el diseño de software, la arquitectura y la programación. Experiencia con un amplio rango de tecnologías y aplicaciones software. Amante de Linux y usuario de Vim que aprecia el desarrollo open-source y usa sus ideas para dar forma a mis trabajo y las herramientas que uso. Presto mucha atención a los detalles en todo lo que hago, evitando abstracciones innecesarias y adhiriéndome al principio de que la simplicidad es la máxima sofisticación.',
+    info: 'Tech Lead con más de 20 años de experiencia en ingeniería de software con una sólida base matemática. Apasionado por el diseño de software, la arquitectura y la programación. Experiencia con un amplio rango de tecnologías y aplicaciones software. Amante de Linux y usuario de Vim que aprecia el desarrollo open-source y usa sus ideas como base para dar forma a mis trabajo y a las herramientas que uso. Presto mucha atención a los detalles en todo lo que hago, evitando abstracciones innecesarias y adhiriéndome al principio de que la simplicidad es la máxima sofisticación.',
   },
   skills: {
     'Backend & Frontend':

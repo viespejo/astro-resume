@@ -7,4 +7,6 @@ export default defineConfig({
     enabled: false,
   },
   integrations: [tailwind()],
+  site: 'https://viespejo.github.io',
+  base: '/astro-resume',
 });

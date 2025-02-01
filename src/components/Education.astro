@@ -1,16 +1,43 @@
-<h3>University of Seville</h3>
+---
+const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
+const currentLang = currentPath.startsWith(base + '/es') ? 'es' : 'en';
+
+const translations = {
+  en: {
+    university: 'University of Seville',
+    bachelor: 'Bachelor, Mathematics',
+    bachelorSpec:
+      'Applied Mathematics: Functional Equations and Numerical Analysis',
+    expert: 'University Expert',
+    expertSpec:
+      'Analysis Technologies for the Information Society (Systems Analyst)',
+    cap: 'C.A.P',
+    capSpec: 'Teaching Proficiency Certificate, Mathematics',
+  },
+  es: {
+    university: 'Universidad de Sevilla',
+    bachelor: 'Licenciatura, Matemáticas',
+    bachelorSpec:
+      'Matemática Aplicada: Ecuaciones Funcionales y Análisis Numérico',
+    expert: 'Experto Universitario',
+    expertSpec:
+      'Tecnologías de Análisis para la Sociedad de la Información (Analista de Sistemas)',
+    cap: 'C.A.P',
+    capSpec: 'Certificado de Aptitud Pedagógica, Matemáticas',
+  },
+};
+
+const t = translations[currentLang];
+---
+
+<h3>{t.university}</h3>
 <p>
-  <span class="font-bold">Bachelor, Mathematics</span> | <em
-    >Applied Mathematics: Functional Equations and Numerical Analysis</em
-  > | 1997-2002
+  <span class="font-bold">{t.bachelor}</span> | <em>{t.bachelorSpec}</em> | 1997-2002
 </p>
 <p>
-  <span class="font-bold">University Expert</span> | <em
-    >Analysis Technologies for the Information Society (Systems Analyst)</em
-  > | 2002-2003
+  <span class="font-bold">{t.expert}</span> | <em>{t.expertSpec}</em> | 2002-2003
 </p>
 <p>
-  <span class="font-bold">C.A.P</span> | <em
-    >Teaching Proficiency Certificate, Mathematics</em
-  > | 2004-2005
+  <span class="font-bold">{t.cap}</span> | <em>{t.capSpec}</em> | 2004-2005
 </p>

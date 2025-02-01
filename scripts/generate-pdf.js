@@ -5,7 +5,9 @@ const main = async () => {
   const page = await browser.newPage();
 
   // Generate English version
-  await page.goto('http://localhost:4321/en', { waitUntil: 'networkidle' });
+  await page.goto('http://localhost:4321/astro-resume/en', {
+    waitUntil: 'networkidle',
+  });
   await page.emulateMedia({ media: 'screen' });
   await page.pdf({
     path: 'public/resume.en.pdf',
@@ -14,7 +16,9 @@ const main = async () => {
   });
 
   // Generate Spanish version
-  await page.goto('http://localhost:4321/es', { waitUntil: 'networkidle' });
+  await page.goto('http://localhost:4321/astro-resume/es', {
+    waitUntil: 'networkidle',
+  });
   await page.emulateMedia({ media: 'screen' });
   await page.pdf({
     path: 'public/resume.es.pdf',
