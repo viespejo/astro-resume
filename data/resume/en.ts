@@ -10,14 +10,14 @@ export const resumeEn: ResumeData = {
   },
   skills: {
     'Backend & Frontend':
-      'Golang, JavaScript/Typescript, Node.js, Express, NestJS, React, HTML, CSS, MySQL, PostgreSQL, Redis, NATS, MongoDB, ...',
+      'Golang, JavaScript/Typescript, Node.js, Express, NestJS, React, HTML, CSS, MySQL, PostgreSQL, Redis, NATS, MongoDB, Python, FastAPI...',
     'Cloud/DevOps':
       'Docker, Kubernetes, Terraform, Ansible, CI/CD pipelines, ...',
     GCP: 'Cloud Build, Cloud Functions, Cloud Run, Cloud SQL, Pub/Sub, Cloud Storage, BigQuery, Firestore, ...',
     'System Design': 'Microservices, RESTful APIs, gRPC, WebSockets, ...',
     Architecture:
       'DDD, Clean Architecture, Event-Driven Architecture, Outbox Pattern, ...',
-    'AI/ML': 'LangChain, Vertex AI, PGVector, ...',
+    'AI/ML': 'LangChain, Vertex AI, PGVector, WhisperX, ...',
     'Data Processing and Analysis': 'Kafka, Druid, CubeJS, ...',
     'OS/Tools': 'GNU/Linux, Git, Neovim, Tmux, Jira, Confluence, ...',
     'AI Daily Tools':
@@ -25,11 +25,32 @@ export const resumeEn: ResumeData = {
   },
   projects: [
     {
+      name: 'R&D AI/ML APIs',
+      company: 'Transcom',
+      companyUrl: 'https://www.transcom.com/',
+      position: 'Tech Lead',
+      period: 'Dec 2024 - Current',
+      title: 'Enterprise AI Infrastructure & MLOps Platform',
+      description:
+        'Leading the development of an AI Lab infrastructure to support the deployment, management, and lifecycle of mission-critical AI/ML capabilities across business verticals. This ML platform exposes standardized APIs for various AI functions including audio transcription, text translation, sentiment analysis, text classification, entity extraction, and generative text capabilities. The platform enables seamless integration with existing business orchestrators while ensuring optimal resource utilization, cost efficiency, and enterprise-grade security.',
+      challenge:
+        'design a scalable and fault-tolerant infrastructure to handle diverse AI workloads with varying resource requirements, implementing GPU sharing and optimization strategies to maximize utilization across different model deployments',
+      skills: [
+        'python',
+        'fastapi',
+        'docker',
+        'kubernetes',
+        'gcp',
+        'pytorch-cuda-cudnn',
+        'whisperx',
+      ],
+    },
+    {
       name: 'Knowledge Assist',
       company: 'Transcom',
       companyUrl: 'https://www.transcom.com/',
       position: 'Tech Lead',
-      period: 'Dec 2023 - Current',
+      period: 'Dec 2023 - Dec 2024',
       title: 'RAG System for dynamic knowledge base',
       description:
         'Web based application that allows agents chat with a bot to get the right answer to operational questions. The bot uses a dynamic knowledge base updated by admins by using the same web application.',

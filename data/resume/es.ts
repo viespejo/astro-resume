@@ -25,6 +25,27 @@ export const resumeEs: ResumeData = {
   },
   projects: [
     {
+      name: 'R&D AI/ML APIs',
+      company: 'Transcom',
+      companyUrl: 'https://www.transcom.com/',
+      position: 'Tech Lead',
+      period: 'Dic 2024 - Actual',
+      title: 'Enterprise AI Infrastructure & MLOps Platform',
+      description:
+        'Liderar el desarrollo de una infraestructura de Laboratorio de IA para soportar el despliegue, gestión y ciclo de vida de capacidades críticas de IA/ML en diferentes verticales del negocio. Esta plataforma ML expone APIs estandarizadas para diversas funciones de IA incluyendo transcripción de audio, traducción de texto, análisis de sentimientos, clasificación de texto, extracción de entidades y capacidades de texto generativo. La plataforma permite una integración fluida con los orquestadores empresariales existentes mientras asegura una utilización óptima de recursos, eficiencia en costes y seguridad de nivel empresarial.',
+      challenge:
+        'diseñar una infraestructura escalable y tolerante a fallos para manejar cargas de trabajo de IA diversas con requisitos de recursos variables, implementando estrategias de compartición y optimización de GPU para maximizar la utilización en diferentes despliegues de modelos',
+      skills: [
+        'python',
+        'fastapi',
+        'docker',
+        'kubernetes',
+        'gcp',
+        'pytorch-cuda-cudnn',
+        'whisperx',
+      ],
+    },
+    {
       name: 'Knowledge Assist',
       company: 'Transcom',
       companyUrl: 'https://www.transcom.com/',
